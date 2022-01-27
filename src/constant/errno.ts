@@ -6,6 +6,7 @@ export default {
   metaMaskWalletRequestPermissions: -32002,
   metaMaskUserRejectedAccountAccess: -32603,
   metaMaskUserDeniedMessageSignature: 4001,
+  metaMaskSwitchChainNotAdded: 4902, // This error code indicates that the chain has not been added to MetaMask.
   // WalletConnect
   walletConnectUserRejectedTheTransaction: 'User rejected the transaction',
   walletConnectInsufficientFundsForTransfer: 'insufficient funds for transfer',

@@ -282,20 +282,35 @@ export default class WalletSdk {
             const _walletName = store?.state.me.connectedAccount.walletName
             if (_walletName && this.walletName !== _walletName && _walletName !== WALLETS.tronLink) {
               if (this.walletName === WALLETS.metaMask) {
-                $alert({
-                  title: i18n.t('Error'),
+                this.metaMaskSwitchChain({
+                  chainId: ETH.chainId,
+                  networkName: ETH.networkName,
+                  symbol: ETH.symbol,
+                  decimals: ETH.decimals,
+                  rpcUrl: ETH.rpcUrl,
+                  blockExplorerUrl: ETH.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the Ethereum main network before connecting') as string)
                 })
               }
               else if (this.walletName === WALLETS.bscWallet) {
-                $alert({
-                  title: i18n.t('Error'),
+                this.metaMaskSwitchChain({
+                  chainId: BSC.chainId,
+                  networkName: BSC.networkName,
+                  symbol: BSC.symbol,
+                  decimals: BSC.decimals,
+                  rpcUrl: BSC.rpcUrl,
+                  blockExplorerUrl: BSC.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the BSC main network before connecting') as string)
                 })
               }
               else if (this.walletName === WALLETS.polygonWallet) {
-                $alert({
-                  title: i18n.t('Error'),
+                this.metaMaskSwitchChain({
+                  chainId: Polygon.chainId,
+                  networkName: Polygon.networkName,
+                  symbol: Polygon.symbol,
+                  decimals: Polygon.decimals,
+                  rpcUrl: Polygon.rpcUrl,
+                  blockExplorerUrl: Polygon.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the Polygon Mainnet before connecting') as string)
                 })
               }
@@ -304,20 +319,35 @@ export default class WalletSdk {
           }
           else {
             if (this.walletName === WALLETS.metaMask) {
-              $alert({
-                title: i18n.t('Error'),
+              this.metaMaskSwitchChain({
+                chainId: ETH.chainId,
+                networkName: ETH.networkName,
+                symbol: ETH.symbol,
+                decimals: ETH.decimals,
+                rpcUrl: ETH.rpcUrl,
+                blockExplorerUrl: ETH.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the Ethereum main network before connecting') as string)
               })
             }
             else if (this.walletName === WALLETS.bscWallet) {
-              $alert({
-                title: i18n.t('Error'),
+              this.metaMaskSwitchChain({
+                chainId: BSC.chainId,
+                networkName: BSC.networkName,
+                symbol: BSC.symbol,
+                decimals: BSC.decimals,
+                rpcUrl: BSC.rpcUrl,
+                blockExplorerUrl: BSC.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the BSC main network before connecting') as string)
               })
             }
             else if (this.walletName === WALLETS.polygonWallet) {
-              $alert({
-                title: i18n.t('Error'),
+              this.metaMaskSwitchChain({
+                chainId: Polygon.chainId,
+                networkName: Polygon.networkName,
+                symbol: Polygon.symbol,
+                decimals: Polygon.decimals,
+                rpcUrl: Polygon.rpcUrl,
+                blockExplorerUrl: Polygon.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the Polygon Mainnet before connecting') as string)
               })
             }
@@ -329,20 +359,35 @@ export default class WalletSdk {
             const _walletName = store?.state.me.connectedAccount.walletName
             if (_walletName && this.walletName !== _walletName && _walletName !== WALLETS.tronLink) {
               if (this.walletName === WALLETS.metaMask) {
-                $alert({
-                  title: i18n.t('Tips'),
+                this.metaMaskSwitchChain({
+                  chainId: EthereumGoerliChainId,
+                  networkName: ETH.networkName,
+                  symbol: ETH.symbol,
+                  decimals: ETH.decimals,
+                  rpcUrl: ETH.rpcUrl,
+                  blockExplorerUrl: ETH.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the Goerli test network before connecting') as string)
                 })
               }
               else if (this.walletName === WALLETS.bscWallet) {
-                $alert({
-                  title: i18n.t('Tips'),
+                this.metaMaskSwitchChain({
+                  chainId: BSCTestnetChainId,
+                  networkName: BSC.networkName,
+                  symbol: BSC.symbol,
+                  decimals: BSC.decimals,
+                  rpcUrl: BSC.rpcUrl,
+                  blockExplorerUrl: BSC.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the BSC Testnet before connecting') as string)
                 })
               }
               else if (this.walletName === WALLETS.polygonWallet) {
-                $alert({
-                  title: i18n.t('Error'),
+                this.metaMaskSwitchChain({
+                  chainId: PolygonTestnetChainId,
+                  networkName: Polygon.networkName,
+                  symbol: Polygon.symbol,
+                  decimals: Polygon.decimals,
+                  rpcUrl: Polygon.rpcUrl,
+                  blockExplorerUrl: Polygon.blockExplorerUrl,
                   message: (i18n.t('Please switch your wallet to the Polygon Testnet before connecting') as string)
                 })
               }
@@ -351,20 +396,35 @@ export default class WalletSdk {
           }
           else {
             if (this.walletName === WALLETS.metaMask) {
-              $alert({
-                title: i18n.t('Tips'),
+              this.metaMaskSwitchChain({
+                chainId: EthereumGoerliChainId,
+                networkName: ETH.networkName,
+                symbol: ETH.symbol,
+                decimals: ETH.decimals,
+                rpcUrl: ETH.rpcUrl,
+                blockExplorerUrl: ETH.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the Goerli test network before connecting') as string)
               })
             }
             else if (this.walletName === WALLETS.bscWallet) {
-              $alert({
-                title: i18n.t('Tips'),
+              this.metaMaskSwitchChain({
+                chainId: BSCTestnetChainId,
+                networkName: BSC.networkName,
+                symbol: BSC.symbol,
+                decimals: BSC.decimals,
+                rpcUrl: BSC.rpcUrl,
+                blockExplorerUrl: BSC.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the BSC Testnet before connecting') as string)
               })
             }
             else if (this.walletName === WALLETS.polygonWallet) {
-              $alert({
-                title: i18n.t('Error'),
+              this.metaMaskSwitchChain({
+                chainId: PolygonTestnetChainId,
+                networkName: Polygon.networkName,
+                symbol: Polygon.symbol,
+                decimals: Polygon.decimals,
+                rpcUrl: Polygon.rpcUrl,
+                blockExplorerUrl: Polygon.blockExplorerUrl,
                 message: (i18n.t('Please switch your wallet to the Polygon Testnet before connecting') as string)
               })
             }
@@ -417,6 +477,72 @@ export default class WalletSdk {
         title: i18n.t('Error'),
         message: (i18n.t('Please install MetaMask!') as string)
       })
+    }
+  }
+
+  async metaMaskSwitchChain ({
+    chainId,
+    networkName,
+    symbol,
+    decimals,
+    rpcUrl,
+    blockExplorerUrl,
+    message
+  }: {
+    chainId: number,
+    networkName: string | undefined,
+    symbol: string,
+    decimals: number,
+    rpcUrl: string | undefined,
+    blockExplorerUrl: string | undefined,
+    message: string
+  }) {
+    const { ethereum } = window
+    const { i18n, $alert } = this.context.app
+    const chainIdHex = Web3Utils.numberToHex(chainId)
+    try {
+      await ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{
+          chainId: chainIdHex
+        }]
+      })
+    }
+    catch (error: any) {
+      console.error(error)
+      if (error.code === errno.metaMaskSwitchChainNotAdded) {
+        try {
+          await ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainId: chainIdHex,
+                chainName: networkName,
+                nativeCurrency: {
+                  name: symbol,
+                  symbol,
+                  decimals
+                },
+                rpcUrls: [rpcUrl],
+                blockExplorerUrls: [blockExplorerUrl]
+              }
+            ]
+          })
+        }
+        catch (addError) {
+          console.error(addError)
+          $alert({
+            title: i18n.t('Error'),
+            message
+          })
+        }
+      }
+      else {
+        $alert({
+          title: i18n.t('Error'),
+          message
+        })
+      }
     }
   }
 
