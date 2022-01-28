@@ -99,7 +99,7 @@ export const BSC: IMainChain = {
   explorerAddress: isProdData ? 'https://bscscan.com/address/' : 'https://testnet.bscscan.com/address/',
   explorerTrx: isProdData ? 'https://bscscan.com/tx/' : 'https://testnet.bscscan.com/tx/',
   networkName: isProdData ? 'Binance Smart Chain Mainnet' : 'Binance Smart Chain Testnet',
-  rpcUrl: isProdData ? 'https://bsc-dataseed.binance.org' : 'https://data-seed-prebsc-1-s1.binance.org:8545',
+  rpcUrl: isProdData ? 'https://bsc-dataseed3.binance.org' : 'https://data-seed-prebsc-2-s1.binance.org:8545',
   blockExplorerUrl: isProdData ? 'https://bscscan.com' : 'https://testnet.bscscan.com'
 }
 
@@ -114,7 +114,7 @@ export const Polygon: IMainChain = {
   explorerAddress: isProdData ? 'https://polygonscan.com/address/' : 'https://mumbai.polygonscan.com/address/',
   explorerTrx: isProdData ? 'https://polygonscan.com/tx/' : 'https://mumbai.polygonscan.com/tx/',
   networkName: isProdData ? 'Polygon Mainnet' : 'Polygon Testnet Mumbai',
-  rpcUrl: isProdData ? 'https://polygon-rpc.com' : 'https://matic-mumbai.chainstacklabs.com',
+  rpcUrl: isProdData ? 'https://matic-mainnet-full-rpc.bwarelabs.com' : 'https://matic-mumbai.chainstacklabs.com',
   blockExplorerUrl: isProdData ? 'https://polygonscan.com' : 'https://mumbai.polygonscan.com'
 }
 
