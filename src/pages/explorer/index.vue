@@ -53,18 +53,9 @@
         >{{ $tt('Add to calendar') }}
         </span>
       </template>
-      <i18n
-        v-else
-        tag="span"
-        path="注册提示"
-        :i18nkey="$tt('注册提示')"
-      >
-        <a
-          slot="twitter"
-          class="explorer__twitter"
-          href="https://twitter.com/dotbitHQ"
-          target="_blank">@dotbitHQ</a>
-      </i18n>
+      <template v-else>
+        {{ $tt('This account has not been released. Try another one.') }}
+      </template>
     </div>
     <div class="explorer__search_result">
       <div
@@ -87,23 +78,7 @@
       <div class="explorer__open-registration-rules__item">
         <span class="explorer__open-registration-rules__item__dot">•</span>
         <span>
-          {{ $tt('4~9 characters: Randomly release 60%.') }}
-          <i18n
-            tag="span"
-            path="开放注册通知"
-            :i18nkey="$tt('开放注册通知')"
-          >
-            <span
-              slot="percentage"
-              class="explorer__open-registration-rules__item__high-brightness"
-            >100%</span>
-            <span
-              slot="date"
-              class="explorer__open-registration-rules__item__high-brightness"
-            >
-              {{ $tt('12:00 PM (UTC+0) on October 18th') }}
-            </span>
-          </i18n>
+          {{ $tt('4~9 digits, randomly release 60% of them. .bit accounts with pure number, pure Emoji, pure Thai, pure Korean, pure Turkish, and pure Vietnamese will be released to 100% at 12:00 PM (UTC+0) on October 18th.') }}
           <a
             class="explorer__rules-details"
             :href="$i18n.locale === LANGUAGE.zhCN ? 'https://docs.did.id/zh/register-das/open-registration-rules' : 'https://docs.did.id/register-das/open-registration-rules'"
@@ -393,7 +368,7 @@ export default Vue.extend({
           if (res.status === ACCOUNT_STATUS.notOpenRegister) {
             this.searchResult = {}
             this.notOpenForRegistrationShowing = true
-            this.registrableDate = '2022–10–18 12:00PM (UTC+0)'
+            this.registrableDate = res.open_timestamp ? '2022–10–18 12:00PM (UTC+0)' : ''
           }
           else {
             this.searchResult = {
@@ -587,17 +562,11 @@ export default Vue.extend({
   color: $assist-font-color;
 }
 
-.explorer__open-registration-rules__item__high-brightness {
-  color: $success-font-color;
-  font-weight: 600;
-}
-
 .explorer_mobile {
   padding: 16px 16px 0 16px;
 }
 
-.explorer__add-to-calendar,
-.explorer__twitter {
+.explorer__add-to-calendar {
   color: $link-font-color;
   cursor: pointer;
 

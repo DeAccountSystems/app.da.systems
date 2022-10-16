@@ -16,6 +16,7 @@ export interface ISearchAccount {
   account_price: string
   base_amount: string
   register_tx_map: { [key: string]: IRegisterTxMap }
+  open_timestamp: string
 }
 
 export default class Explorer extends BasicService {

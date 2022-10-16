@@ -41,7 +41,7 @@
     "v-click-outside": "^3.1.2",
     "vue-i18n": "^8.25.0",
     "vuex-persistedstate": "^3.2.0",
-    "wallet-sdk-js": "^0.0.12",
+    "wallet-sdk-js": "^0.0.13",
     "web3": "^1.7.3"
   },
   "devDependencies": {
